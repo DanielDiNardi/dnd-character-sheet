@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "player_name": null,
+  "character": [
+    {
+      "passive_perception": 10,
+      "immunities": [],
+      "subrace": "Illuskan",
+      "ac": 13,
+      "saving_throw_advantages": null,
+      "proficiency_bonus": "3",
+      "race": "Human",
+      "alignment": "Chaotic Good",
+      "experience": 300,
+      "background": null,
+      "equipment": [
+        {
+          "equipment": {
+            "clothes-common": {
+              "id": 17592295453576,
+              "quantity": 1,
+              "equipped?": true,
+              "background-starting-equipment?": true
+            },
+            "knife-small": {
+              "quantity": 1,
+              "equipped?": true
+            },
+            "book": {
+              "quantity": 1,
+              "equipped?": true
+            },
+            "ink-pen": {
+              "quantity": 1,
+              "equipped?": true
+            },
+            "bag-of-sand": {
+              "quantity": 1,
+              "equipped?": true
+            },
+            "parchment": {
+              "quantity": 10,
+              "equipped?": true
+            },
+            "backpack": {
+              "quantity": 1,
+              "equipped?": true
+            },
+            "spellbook": {
+              "id": 17592295448831,
+              "quantity": 1,
+              "equipped?": true,
+              "class-starting-equipment?": true
+            },
+            "ink": {
+              "quantity": 1,
+              "equipped?": true
+            },
+            "component-pouch": {
+              "quantity": 1,
+              "equipped?": true
+            }
+          },
+          "armor": null,
+          "magic-armor": null,
+          "magic-items": null,
+          "weapons": [
+            [
+              "dagger",
+              {
+                "quantity": 1,
+                "equipped?": true
+              }
+            ]
+          ],
+          "magic-weapons": []
+        }
+      ],
+      "spells": [
+        "Fire Bolt",
+        "Prestidigitation",
+        "Comprehend Languages",
+        "Expeditious Retreat",
+        "False Life",
+        "Feather Fall",
+        "Floating Disk",
+        "Mage Armor",
+        "Shield",
+        "Sleep",
+        "Blur",
+        "Continual Flame",
+        "Magic Weapon",
+        "Fireball",
+        "Tiny Hut",
+        "Vampiric Touch"
+      ],
+      "damage_resistances": [],
+      "treasure": {
+        "gp": 10,
+        "treasure": ""
+      },
+      "abilities_bonuses": [
+        {
+          "abilities": {
+            "str": 10,
+            "dex": 16,
+            "con": 13,
+            "int": 14,
+            "wis": 11,
+            "cha": 8
+          },
+          "bonuses": {
+            "str": 0,
+            "dex": 3,
+            "con": 1,
+            "int": 2,
+            "wis": 0,
+            "cha": -1
+          }
+        }
+      ],
+      "image_url": null,
+      "damage_vulnerabilities": null,
+      "proficiencies": [
+        {
+          "all": "Weapon Proficiencies: Crossbow, light; Dagger; Dart; Quarterstaff; Sling\n\nLanguage Proficiencies: Common; Elvish",
+          "tool": null,
+          "weapon": "Crossbow, light; Dagger; Dart; Quarterstaff; Sling",
+          "armor": null,
+          "language": "Common; Elvish"
+        }
+      ],
+      "skills": {
+        "religion": "+2",
+        "animal-handling-check": false,
+        "persuasion": "-1",
+        "sleight-of-hand-check": false,
+        "religion-check": false,
+        "nature-check": false,
+        "investigation": "+2",
+        "performance-check": false,
+        "acrobatics": "+6",
+        "performance": "-1",
+        "perception": "0",
+        "sleight-of-hand": "+3",
+        "medicine-check": false,
+        "investigation-check": false,
+        "survival": "0",
+        "history": "+2",
+        "history-check": false,
+        "animal-handling": "0",
+        "nature": "+2",
+        "deception": "-1",
+        "intimidation": "-1",
+        "arcana": "+5",
+        "athletics": "0",
+        "perception-check": false,
+        "intimidation-check": false,
+        "survival-check": false,
+        "insight-check": true,
+        "stealth-check": false,
+        "deception-check": false,
+        "athletics-check": false,
+        "persuasion-check": false,
+        "arcana-check": true,
+        "acrobatics-check": true,
+        "insight": "+3",
+        "medicine": "0",
+        "stealth": "+3"
+      },
+      "characteristics": [
+        {
+          "factions_and_organizations": null,
+          "faction_image_url": null,
+          "eyes": "Steely grey",
+          "age": "40",
+          "sex": "Male",
+          "ideals": "Action over thought",
+          "speed": 30,
+          "personality-trait-2": "Trusting",
+          "bonds": "A stranger is just a fiend you haven't met yet",
+          "personality_trait_1": "Just",
+          "weight": "80kg",
+          "hair": "Brown",
+          "skin": "Fair",
+          "height": "6'0\"",
+          "character_backstory": "Rodrick (Knutsson) the Reaver was born in Voljyrstad a small village in the Northern dominions.\nAfter being levied into the local fiefdom's military and after servitude not accustomed to docile life,\nhe became a guild contractor, putting his military experience taking on various tasks.\n\nOne such task involved Rodrick delving into an ancient crypt, considered sacrilege by the locals of the land\nand perilous. But non the less adventurers are enticed by monetary gain at the hand of wealthy financial backers.\nOnce known by locals these adventurers are given the derogatory term Reaver, that nothing is sacred.\n\nOn this task Rodrick came in contact with the artefact, a grimoire which contained the crystallised memories\nof an elf of long ago. Upon contact these memories were injected into Rodrick destroying the artefact in the progress.\nNot realising the initial effects Rodrick started having faint dreams of the past, not his.\n\nAfter returning to his sponsor and telling of his happenings, he was sent to a great mage college of ${name_here} to be studied,\nfor a way to undo the fate that occurred. It was there where Rodrick found out he could enter trance-like states\nchannelling the memories of the long forgotten elf to bring magic into existence, along with the bladesong \nand unlocking his latent capacity for magic.\n\nBeing indebted to his sponsor, Rodrick nowadays works as a free agent for the mage college of ${name_here}.\nThe injected memories and his own study of the arts have proven to be useful skillset\nin the arsenal of the mage college, whether it be to perform more dungeon delving or other work. \n\nHe now wanders the lands aligned to the mage college free-willed,  waiting for the call to action.",
+          "flaws": "Greedy"
+        }
+      ],
+      "save_bonuses": {
+        "str": 0,
+        "dex": 3,
+        "con": 1,
+        "int": 5,
+        "wis": 3,
+        "cha": -1
+      },
+      "character_name": "Roderick the Reaver",
+      "attacks": {
+        "attacks-and-spellcasting": "Number of Attacks: 1\n",
+        "weapon-name-1": "Dagger",
+        "weapon-attack-bonus-1": "+6",
+        "weapon-damage-1": "1d4+3 piercing"
+      },
+      "hp": [
+        {
+          "hp_current": null,
+          "hp_max": 40
+        }
+      ],
+      "initiative_bonus": 3,
+      "classes": {
+        "wizard": {
+          "class-name": "Wizard",
+          "class-level": 6,
+          "hit-die": 6
+        }
+      },
+      "condition_immunities": [],
+      "traits": {
+        "features-and-traits-2": "\n\n-----------Other Traits------------\nArcane Recovery. When you finish a short rest, regain spell slots totalling no more than 3, and each must be 5th level or lower. (use once/day)."
+      }
+    }
+  ]
+}
