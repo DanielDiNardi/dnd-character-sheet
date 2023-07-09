@@ -1,0 +1,35 @@
+#info{
+    background-color: darkgoldenrod;
+}
+
+#actions{
+    background-color: aquamarine;
+}
+
+#character_info{
+    background-color: brown;
+}
+
+#other_modifiers{
+    background-color: blueviolet;
+}
+
+#ability_scores{
+    background-color: chartreuse;
+}
+
+#health_info{
+    background-color: chocolate;
+}
+
+#proficiencies{
+    background-color: coral;
+}
+
+#weapons_and_spell_modifiers{
+    background-color: crimson;
+}
+
+#equiptment{
+    background-color: cyan;
+}
