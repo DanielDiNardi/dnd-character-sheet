@@ -7,7 +7,12 @@
     <title>D&D Character</title>
 </head>
 <body>
-    <div><pre id="character_data"></pre></div>
+     <!-- all types of rolling needs it's own button -->
+    <button data-roll="20" data-skills="religion" onclick="roll()">Roll Religion</button>
+    <div>
+        <pre id="character_data"></pre>
+    </div>
     <script src="./javascript/getCharacter.js"></script>
+    <script src="./javascript/clickToRoll.js"></script>
 </body>
 </html>
