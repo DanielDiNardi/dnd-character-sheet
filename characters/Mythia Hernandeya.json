@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "player_name": "Bianca",
+  "character": [
+    {
+      "passive_perception": 13,
+      "immunities": [
+        {
+          "value": "magical-sleep",
+          "qualifier": null
+        }
+      ],
+      "subrace": "",
+      "ac": 13,
+      "saving_throw_advantages": null,
+      "proficiency_bonus": "3",
+      "race": "Elf",
+      "alignment": "Chaotic Neutral",
+      "experience": null,
+      "background": null,
+      "equipment": [
+        {
+          "equipment": {
+            "explorers-pack": {
+              "id": 17592293878649,
+              "quantity": 1,
+              "equipped?": true,
+              "class-starting-equipment?": true
+            },
+            "clothes-traveler-s": {
+              "id": 17592293879085,
+              "quantity": 1,
+              "equipped?": true,
+              "background-starting-equipment?": true
+            },
+            "yew-wand": {
+              "quantity": 1,
+              "equipped?": true
+            }
+          },
+          "armor": {
+            "leather": {
+              "id": 17592293878646,
+              "quantity": 1,
+              "equipped?": true,
+              "class-starting-equipment?": true
+            }
+          },
+          "magic-armor": null,
+          "magic-items": null,
+          "weapons": [
+            [
+              "dagger",
+              {
+                "equipped?": true,
+                "quantity": 1
+              }
+            ],
+            [
+              "spear",
+              {
+                "equipped?": true,
+                "quantity": 1
+              }
+            ]
+          ],
+          "magic-weapons": []
+        }
+      ],
+      "spells": [
+        {
+          "spellcasting_fields": "TO-DO Spells. um yah... it's a nightmare to pull spells and details"
+        }
+      ],
+      "damage_resistances": [],
+      "treasure": {
+        "gp": 8,
+        "treasure": ""
+      },
+      "abilities_bonuses": [
+        {
+          "abilities": {
+            "str": 10,
+            "dex": 15,
+            "con": 15,
+            "int": 15,
+            "wis": 10,
+            "cha": 16
+          },
+          "bonuses": {
+            "str": 0,
+            "dex": 2,
+            "con": 2,
+            "int": 2,
+            "wis": 0,
+            "cha": 3
+          }
+        }
+      ],
+      "image_url": null,
+      "damage_vulnerabilities": null,
+      "proficiencies": [
+        {
+          "all": "Tool Proficiencies: Herbalism Kit\n\nWeapon Proficiencies: Club; Dagger; Dart; Javelin; Mace; Quarterstaff; Scimitar; Sickle; Sling; Spear\n\nArmor Proficiencies: Light; Medium; Shields\n\nLanguage Proficiencies: Common; Druidic; Elvish",
+          "tool": "Herbalism Kit",
+          "weapon": "Club; Dagger; Dart; Javelin; Mace; Quarterstaff; Scimitar; Sickle; Sling; Spear",
+          "armor": "Light; Medium; Shields",
+          "language": "Common; Druidic; Elvish"
+        }
+      ],
+      "skills": {
+        "religion": "+2",
+        "animal-handling-check": true,
+        "persuasion": "+3",
+        "sleight-of-hand-check": false,
+        "religion-check": false,
+        "nature-check": true,
+        "investigation": "+2",
+        "performance-check": false,
+        "acrobatics": "+2",
+        "performance": "+3",
+        "perception": "+3",
+        "sleight-of-hand": "+2",
+        "medicine-check": false,
+        "investigation-check": false,
+        "survival": "0",
+        "history": "+2",
+        "history-check": false,
+        "animal-handling": "+3",
+        "nature": "+5",
+        "deception": "+3",
+        "intimidation": "+3",
+        "arcana": "+2",
+        "athletics": "0",
+        "perception-check": true,
+        "intimidation-check": false,
+        "survival-check": false,
+        "insight-check": false,
+        "stealth-check": false,
+        "deception-check": false,
+        "athletics-check": false,
+        "persuasion-check": false,
+        "arcana-check": false,
+        "acrobatics-check": false,
+        "insight": "0",
+        "medicine": "0",
+        "stealth": "+2"
+      },
+      "characteristics": [
+        {
+          "factions_and_organizations": null,
+          "faction_image_url": null,
+          "eyes": "Green",
+          "age": "152",
+          "sex": "Female",
+          "ideals": "Change is good, which is why I live by an ever-changing set of rules. (Chaotic)",
+          "speed": 30,
+          "personality-trait-2": "Good music makes me weep like a baby.",
+          "bonds": "A trusted friend is the most important thing in the multiverse to me.",
+          "personality_trait_1": "Spring - You do everything with enthusiasm, even the most mundane chores.\n\nSummer - You stand tall and strong so that others can lean on you.\n\nAutumn - If someone is in need, you never withhold aid.\n\nWinter - A penny spent is a penny lost forever.",
+          "weight": "Chunky",
+          "hair": "Vines and Brambles",
+          "skin": "Brown",
+          "height": "5'0\"",
+          "character_backstory": "I was born in the Spring Court to take care of the animals. There, I gained an understanding or the animal behaviours, strengths, and weaknesses.\n\nSoon after, I joined the Druid Circle of the Moon. Where I was taught how to transform into different animals.\n\nIn my free time I practice the pan flute and one day I want to be a renowned bard; like Doja Cat.\n\nJust before I was transported to the Mortal Plane, I was munching on some fruits and nuts while lounging in the shade of a weeping willow with my pets; scimmia and topo.\n\nRight after I found myself in on the Mortal Plane, I found a campfire in the forest where some dead bandits lay. Upon searching the camp, I found a spear and a dagger. Luckily, I kept my yew wand on me.\n\n",
+          "flaws": "Spring - Toil is for drudges. Yours should be a life of leisure.\n\nSummer - Punch first. Talk later.\n\nAutumn - You spend excessively on creature comforts.\n\nWinter - Everything dies eventually. Why bother building anything that is supposedly meant to last?"
+        }
+      ],
+      "save_bonuses": {
+        "str": 0,
+        "dex": 2,
+        "con": 2,
+        "int": 5,
+        "wis": 3,
+        "cha": 3
+      },
+      "character_name": "Mythia Hernandeya",
+      "attacks": {
+        "attacks-and-spellcasting": "Number of Attacks: 1\n",
+        "weapon-name-1": "Spear",
+        "weapon-attack-bonus-1": "+3",
+        "weapon-damage-1": "1d6+0 piercing",
+        "weapon-name-2": "Dagger",
+        "weapon-attack-bonus-2": "+5",
+        "weapon-damage-2": "1d4+2 piercing"
+      },
+      "hp": [
+        {
+          "hp_current": null,
+          "hp_max": 51
+        }
+      ],
+      "initiative_bonus": 2,
+      "classes": {
+        "druid": {
+          "class-name": "Druid",
+          "class-level": 6,
+          "hit-die": 8
+        }
+      },
+      "condition_immunities": [],
+      "traits": {
+        "features-and-traits-2": "Darkvision: 60 ft.\nImmunities: magical-sleep\n\n---------------Actions--------------\nWild Shape. You can transform into a beast you have seen with CR 1/2 and no flying speed (lasts 3 hours, use twice/rest).\n\n-----------Other Traits------------\nDruidic. You can speak Druidic and use it to leave hidden message and automatically spot messages left by others.\n\nFey Ancestry. Advantage on charmed saves and immune to sleep magic.\n\nTrance. Trance 4 hrs. instead of sleep 8."
+      }
+    }
+  ]
+}

@@ -3,7 +3,7 @@ const fs = require("fs");
 
 const CharacterRouter = express.Router();
 
-var characterRawData = fs.readFileSync("./characters/Roderick the Reaver.json");
+var characterRawData = fs.readFileSync("./characters/Mythia Hernandeya.json");
 var character = JSON.parse(characterRawData);
 
 CharacterRouter.get('/', (req, res) => {

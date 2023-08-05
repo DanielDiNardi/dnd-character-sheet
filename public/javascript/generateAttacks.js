@@ -1,42 +1,51 @@
 
-// Generates buttons for the attack roll and damage roll
+// Generates buttons for the attack roll and damage roll 
 // from the character data
 function Attacks(characterData){
     console.log(characterData);
 
-    var attackModifierSplitArray = characterData["weapon-attack-bonus-1"].split("+")
-    console.log(attackModifierSplitArray);
-    // console.log(GetValues(characterData["weapon-attack-bonus-1"], "+"));
-    var attackModifierString = attackModifierSplitArray[1];
-    var attackModifier = parseInt(attackModifierString);
-    // console.log(attackModifier);
+    for(let index = 1; characterData[`weapon-attack-bonus-${index}`] !== undefined; index++){
+        var attackModifier = GetValues(characterData[`weapon-attack-bonus-${index}`], "+");
+        console.log(attackModifier);
+    
+        // IMPORTANT - DO NOT REMOVE
+        var damageQuantitySplitArray = characterData[`weapon-damage-${index}`].split("d");
+        var damageSplitArray = damageQuantitySplitArray[1].split("+");
+    
+        var damageQuantity = GetValues(characterData[`weapon-damage-${index}`], "+");
+        console.log(damageQuantity);
+    
+        var damage = GetValues(damageQuantitySplitArray[1], "+");
+        console.log(damage);
+    
+        var damageModifier = GetValues(damageSplitArray[1], " ");
+        console.log(damageModifier);
 
-    // IMPORTANT
-    var damageQuantitySplitArray = characterData["weapon-damage-1"].split("d");
-    // console.log(GetValues(characterData["weapon-damage-1"], "+"));
-    var damageQuantityString = damageQuantitySplitArray[0];
-    var damageQuantity = parseInt(damageQuantityString);
-    // console.log(damageQuantity);
+        // Move this into a new generateButtons JavaScript file
+        const attackButtonElement = document.createElement("button");
+        const damageButtonElement = document.createElement("button");
 
-    // IMPORTANT
-    var damageSplitArray = damageQuantitySplitArray[1].split("+");
-    // console.log(GetValues(damageQuantitySplitArray[1], "+"));
-    var damageString = damageSplitArray[0];
-    var damage = parseInt(damageString);
-    // console.log(damage);
+        attackButtonElement.id = `attack-button-${index}`;
+        damageButtonElement.id = `damage-button-${index}`;
 
+        attackButtonElement.setAttribute("onclick", "Roll()");
+        damageButtonElement.setAttribute("onclick", `Roll(${damage})`);
 
-    var damageModifierSplitArray = damageSplitArray[1].split(" ");
-    console.log(GetValues(damageSplitArray[1], " "));
-    var damageModifierString = damageModifierSplitArray[0];
-    var damageModifier = parseInt(damageModifierString);
-    console.log(damageModifier);
+        attackButtonElement.innerHTML = "Roll Attack for " + characterData[`weapon-name-${index}`];
+        damageButtonElement.innerHTML = "Roll Damage for " + characterData[`weapon-name-${index}`];
+
+        document.getElementById("attack-buttons").append(attackButtonElement);
+        document.getElementById("attack-buttons").append(damageButtonElement);
+    }
 }
 
-// make function that does the above ^^
+// Gets attack and damage values from the character data
 function GetValues(array, splitValue) {
     var splitArray = array.split(splitValue);
+
     splitArray = splitArray.filter((value) => value != "");
+
     var splitArrayString = splitArray[0];
+    
     return parseInt(splitArrayString);
 }
