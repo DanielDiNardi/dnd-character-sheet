@@ -1,3 +1,5 @@
+
+// Get Character JSON
 fetch("/character", {
     method: "GET",
     headers: {
@@ -11,6 +13,8 @@ fetch("/character", {
     var character_dataElement = document.getElementById("character_data");
 
     character_dataElement.innerHTML = dataString;
+
+    Attacks(data.character[0].attacks);
 })
 .catch((error, response) => {
     console.error('Error in getCharacter.js: ', error);

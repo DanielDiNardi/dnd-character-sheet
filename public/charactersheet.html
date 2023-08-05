@@ -7,12 +7,46 @@
     <title>D&D Character</title>
 </head>
 <body>
-     <!-- all types of rolling needs it's own button -->
-    <button data-roll="20" data-skills="religion" onclick="roll()">Roll Religion</button>
+    <div id="ability-buttons">
+        <!-- Fix data-skills -->
+        <button data-type="ability" data-skills="" onclick="Roll()">Roll Acrobatics</button>
+        <button data-type="ability" data-skills="animal-handling" onclick="Roll()">Roll Animal Handling</button>
+        <button data-type="ability" data-skills="arcana" onclick="Roll()">Roll Arcana</button>
+        <button data-type="ability" data-skills="atheletics" onclick="Roll()">Roll Athletics</button>
+        <button data-type="ability" data-skills="deception" onclick="Roll()">Roll Deception</button>
+        <button data-type="ability" data-skills="history" onclick="Roll()">Roll History</button>
+    </div>
+    <!-- all types of Rolling needs it's own button -->
+    <div id="skill-buttons">
+        <h3>Skills</h3>
+        <button data-type="skill" data-skills="acrobatics" onclick="Roll()">Roll Acrobatics</button>
+        <button data-type="skill" data-skills="animal-handling" onclick="Roll()">Roll Animal Handling</button>
+        <button data-type="skill" data-skills="arcana" onclick="Roll()">Roll Arcana</button>
+        <button data-type="skill" data-skills="atheletics" onclick="Roll()">Roll Athletics</button>
+        <button data-type="skill" data-skills="deception" onclick="Roll()">Roll Deception</button>
+        <button data-type="skill" data-skills="history" onclick="Roll()">Roll History</button>
+        <button data-type="skill" data-skills="insight" onclick="Roll()">Roll Insight</button>
+        <button data-type="skill" data-skills="investigation" onclick="Roll()">Roll Investigation</button>
+        <button data-type="skill" data-skills="medicine" onclick="Roll()">Roll Medicine</button>
+        <button data-type="skill" data-skills="nature" onclick="Roll()">Roll Nature</button>
+        <button data-type="skill" data-skills="perception" onclick="Roll()">Roll Percepation</button>
+        <button data-type="skill" data-skills="performance" onclick="Roll()">Roll Performance</button>
+        <button data-type="skill" data-skills="persuasion" onclick="Roll()">Roll Persuasion</button>
+        <button data-type="skill" data-skills="religion" onclick="Roll()">Roll Religion</button>
+        <button data-type="skill" data-skills="sleight-of-hand" onclick="Roll()">Roll Sleight of Hand</button>
+        <button data-type="skill" data-skills="stealth" onclick="Roll()">Roll Stealth</button>
+        <button data-type="skill" data-skills="survival" onclick="Roll()">Roll Survival</button>
+    </div>
+
+    <div id="attack-buttons">
+
+    </div>
+
     <div>
         <pre id="character_data"></pre>
     </div>
     <script src="./javascript/getCharacter.js"></script>
     <script src="./javascript/clickToRoll.js"></script>
+    <script src="./javascript/generateAttacks.js"></script>
 </body>
 </html>
