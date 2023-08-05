@@ -7,16 +7,29 @@
     <title>D&D Character</title>
 </head>
 <body>
+    <h1>D&D Character</h1>
+    
+    <!-- Buttons -->
     <div id="ability-buttons">
-        <!-- Fix data-skills -->
-        <button data-type="ability" data-skills="" onclick="Roll()">Roll Acrobatics</button>
-        <button data-type="ability" data-skills="animal-handling" onclick="Roll()">Roll Animal Handling</button>
-        <button data-type="ability" data-skills="arcana" onclick="Roll()">Roll Arcana</button>
-        <button data-type="ability" data-skills="atheletics" onclick="Roll()">Roll Athletics</button>
-        <button data-type="ability" data-skills="deception" onclick="Roll()">Roll Deception</button>
-        <button data-type="ability" data-skills="history" onclick="Roll()">Roll History</button>
+        <h3>Abilities</h3>
+        <button data-type="ability" data-ablilties="str" onclick="Roll()">Roll Strength</button>
+        <button data-type="ability" data-ablilties="dex" onclick="Roll()">Roll Dexterity</button>
+        <button data-type="ability" data-ablilties="con" onclick="Roll()">Roll Constitution</button>
+        <button data-type="ability" data-ablilties="int" onclick="Roll()">Roll Intelligence</button>
+        <button data-type="ability" data-ablilties="wis" onclick="Roll()">Roll Wisdom</button>
+        <button data-type="ability" data-ablilties="cha" onclick="Roll()">Roll Charisma</button>
     </div>
-    <!-- all types of Rolling needs it's own button -->
+    
+    <div id="saving-throw-buttons">
+        <h3>Saving Throws</h3>
+        <button data-type="saving-throw" data-ablilties="str" onclick="Roll()">Roll Strength Saving Throw</button>
+        <button data-type="saving-throw" data-ablilties="dex" onclick="Roll()">Roll Dexterity Saving Throw</button>
+        <button data-type="saving-throw" data-ablilties="con" onclick="Roll()">Roll Constitution Saving Throw</button>
+        <button data-type="saving-throw" data-ablilties="int" onclick="Roll()">Roll Intelligence Saving Throw</button>
+        <button data-type="saving-throw" data-ablilties="wis" onclick="Roll()">Roll Wisdom Saving Throw</button>
+        <button data-type="saving-throw" data-ablilties="cha" onclick="Roll()">Roll Charisma Saving Throw</button>
+    </div>
+
     <div id="skill-buttons">
         <h3>Skills</h3>
         <button data-type="skill" data-skills="acrobatics" onclick="Roll()">Roll Acrobatics</button>
@@ -39,12 +52,15 @@
     </div>
 
     <div id="attack-buttons">
-
+        <h3>Attacks</h3>
     </div>
 
+    <!-- Character Sheet -->
     <div>
         <pre id="character_data"></pre>
     </div>
+
+    <!-- Scripts -->
     <script src="./javascript/getCharacter.js"></script>
     <script src="./javascript/clickToRoll.js"></script>
     <script src="./javascript/generateAttacks.js"></script>
