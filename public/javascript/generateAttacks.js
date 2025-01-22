@@ -1,28 +1,42 @@
-
-// Generates buttons for the attack roll and damage roll 
+// Generates buttons for the attack roll and damage roll
 // from the character data
-function Attacks(characterAttacks){
-    console.log(characterAttacks);
+function Attacks(characterAttacks) {
+    for (
+        let index = 1;
+        characterAttacks[`weapon-attack-bonus-${index}`] !== undefined;
+        index++
+    ) {
+        var attackModifier = GetValues(
+            characterAttacks[`weapon-attack-bonus-${index}`],
+            "+"
+        );
 
-    for(let index = 1; characterAttacks[`weapon-attack-bonus-${index}`] !== undefined; index++){
-        var attackModifier = GetValues(characterAttacks[`weapon-attack-bonus-${index}`], "+");
-        console.log(attackModifier);
-    
         // IMPORTANT - DO NOT REMOVE
-        var damageQuantitySplitArray = characterAttacks[`weapon-damage-${index}`].split("d");
+        var damageQuantitySplitArray =
+            characterAttacks[`weapon-damage-${index}`].split("d");
         var damageSplitArray = damageQuantitySplitArray[1].split("+");
-    
-        var damageQuantity = GetValues(characterAttacks[`weapon-damage-${index}`], "+");
-        console.log(damageQuantity);
-    
-        var damage = GetValues(damageQuantitySplitArray[1], "+");
-        console.log(damage);
-    
-        var damageModifier = GetValues(damageSplitArray[1], " ");
-        console.log(damageModifier);
 
-        GenerateButtons(index, damage, characterAttacks[`weapon-name-${index}`], 'attack');
-        GenerateButtons(index, damage, characterAttacks[`weapon-name-${index}`], 'damage');
+        var damageQuantity = GetValues(
+            characterAttacks[`weapon-damage-${index}`],
+            "+"
+        );
+
+        var damage = GetValues(damageQuantitySplitArray[1], "+");
+
+        var damageModifier = GetValues(damageSplitArray[1], " ");
+
+        GenerateButtons(
+            index,
+            characterAttacks[`weapon-name-${index}`],
+            "attack",
+            {}
+        );
+        GenerateButtons(
+            index,
+            characterAttacks[`weapon-name-${index}`],
+            "damage",
+            {}
+        );
     }
 }
 
@@ -33,6 +47,6 @@ function GetValues(array, splitValue) {
     splitArray = splitArray.filter((value) => value != "");
 
     var splitArrayString = splitArray[0];
-    
+
     return parseInt(splitArrayString);
 }
