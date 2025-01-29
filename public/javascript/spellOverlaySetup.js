@@ -1,13 +1,23 @@
 function spellOverlaySetup() {
-    const spellButtonDiv = createElement("div", { id: "spell-buttons" });
-    const spellDisplayDiv = createElement("div", { id: "spell-display" });
+    // Get spells from character sheet
+
+    const spellButtonDiv = createElement("div", {
+        id: "spell-buttons",
+    });
+    const spellDisplayDiv = createElement("div", {
+        id: "spell-display",
+    });
+
     modal.append(spellButtonDiv);
     modal.append(spellDisplayDiv);
 
+    // TODO: MAKE THIS MORE EFFICIENT
     Object.entries(all_spells).forEach(([level, spells]) => {
         switch (level) {
             case "0":
-                var div = createElement("div", { id: "spells-" + level });
+                var div = createElement("div", {
+                    id: "spells-" + level,
+                });
                 var cantrip_h3 = createElement("h3", {
                     id: level,
                 });
@@ -23,7 +33,9 @@ function spellOverlaySetup() {
 
                 break;
             case "1":
-                var div = createElement("div", { id: "spells-" + level });
+                var div = createElement("div", {
+                    id: "spells-" + level,
+                });
                 var first_level_h3 = createElement("h3", {
                     id: level,
                 });
@@ -39,7 +51,9 @@ function spellOverlaySetup() {
 
                 break;
             case "2":
-                var div = createElement("div", { id: "spells-" + level });
+                var div = createElement("div", {
+                    id: "spells-" + level,
+                });
                 var second_level_h3 = createElement("h3", {
                     id: level,
                 });
@@ -55,7 +69,9 @@ function spellOverlaySetup() {
 
                 break;
             case "3":
-                var div = createElement("div", { id: "spells-" + level });
+                var div = createElement("div", {
+                    id: "spells-" + level,
+                });
                 var third_level_h3 = createElement("h3", {
                     id: level,
                 });
@@ -71,7 +87,9 @@ function spellOverlaySetup() {
 
                 break;
             case "4":
-                var div = createElement("div", { id: "spells-" + level });
+                var div = createElement("div", {
+                    id: "spells-" + level,
+                });
                 var forth_level_h3 = createElement("h3", {
                     id: level,
                 });
@@ -87,7 +105,9 @@ function spellOverlaySetup() {
 
                 break;
             case "5":
-                var div = createElement("div", { id: "spells-" + level });
+                var div = createElement("div", {
+                    id: "spells-" + level,
+                });
                 var fifth_level_h3 = createElement("h3", {
                     id: level,
                 });
@@ -103,7 +123,9 @@ function spellOverlaySetup() {
 
                 break;
             case "6":
-                var div = createElement("div", { id: "spells-" + level });
+                var div = createElement("div", {
+                    id: "spells-" + level,
+                });
                 var sixth_level_h3 = createElement("h3", {
                     id: level,
                 });
@@ -119,7 +141,9 @@ function spellOverlaySetup() {
 
                 break;
             case "7":
-                var div = createElement("div", { id: "spells-" + level });
+                var div = createElement("div", {
+                    id: "spells-" + level,
+                });
                 var seventh_level_h3 = createElement("h3", {
                     id: level,
                 });
@@ -135,7 +159,9 @@ function spellOverlaySetup() {
 
                 break;
             case "8":
-                var div = createElement("div", { id: "spells-" + level });
+                var div = createElement("div", {
+                    id: "spells-" + level,
+                });
                 var eight_level_h3 = createElement("h3", {
                     id: level,
                 });
@@ -151,7 +177,9 @@ function spellOverlaySetup() {
 
                 break;
             case "9":
-                var div = createElement("div", { id: "spells-" + level });
+                var div = createElement("div", {
+                    id: "spells-" + level,
+                });
                 var ninth_level_h3 = createElement("h3", {
                     id: level,
                 });

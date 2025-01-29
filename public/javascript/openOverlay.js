@@ -1,4 +1,4 @@
-function openOverlay(event) {
+async function openOverlay(event) {
     // creating overlay elements
     const background = createElement("div", {
         id: "background",
@@ -20,7 +20,7 @@ function openOverlay(event) {
     const confirmButton = createElement("button", {
         class: "confirm_button",
         innerText: "Confirm",
-        onclick: "confirmSelectedSpells()",
+        onclick: "confirmSelectedSpells(); closeOverlay()",
     });
 
     // set up modal
@@ -40,6 +40,6 @@ function openOverlay(event) {
     });
 
     if (event.target.getAttribute("data-type") === "spell-list") {
-        spellOverlaySetup();
+        await spellOverlaySetup();
     }
 }

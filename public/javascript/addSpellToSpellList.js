@@ -12,68 +12,123 @@ var selected_spells_list = {
 };
 
 function addSpell(event) {
-    // console.log(document.getElementById("spell-display").children);
-    // Array.from(document.getElementById("spell-display").children).forEach(
-    //     (levelDisplay) => {
-    //         console.log(
-    //             Array.from(levelDisplay.children).querySelectorAll("p")
-    //         );
-    //     }
-    // );
+    fetch("/character/getCharacterSpells", {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            const character_spells = data;
 
-    var selected_spell_p_elements = document.querySelectorAll(
-        "#spell-display > div > p"
-    );
+            var selected_spell_p_elements = document.querySelectorAll(
+                "#spell-display > div > p"
+            );
 
-    selected_spell_p_elements.forEach((spell) => {
-        spell.remove();
-    });
+            selected_spell_p_elements.forEach((spell) => {
+                spell.remove();
+            });
 
-    // console.log("Spell Clicked: " + event.target.id);
-    Object.entries(all_spells).forEach(([level, spells]) => {
-        // console.log(level);
+            Object.entries(all_spells).forEach(([level, spells]) => {
+                spells.forEach((spell) => {
+                    if (spell.index === event.target.id) {
+                        var isSpellSelected =
+                            !character_spells[level].find(
+                                (item) => item.index === spell.index
+                            ) &&
+                            !selected_spells_list[level].find(
+                                (item) => item.index === spell.index
+                            );
 
-        spells.forEach((spell) => {
-            if (spell.index === event.target.id) {
-                // console.log(spell);
-                if (!selected_spells_list[level].includes(spell)) {
-                    selected_spells_list[level].push(spell);
-                } else {
-                    // TODO: ADD USER MESSAGE THAT SPELL IS ALREADY ADDED
-                    console.log("already added spells");
-                }
+                        if (isSpellSelected) {
+                            selected_spells_list[level].push(spell);
+                        } else {
+                            // TODO: ADD USER MESSAGE THAT SPELL IS ALREADY ADDED
+                            console.log("already added that spell");
+                        }
 
-                displaySelectedSpells();
-            }
+                        displaySelectedSpells();
+                    }
+                });
+            });
+        })
+        .catch((error, response) => {
+            console.error("Error in spellOverlaySetup.js: ", error);
         });
-    });
-
-    // console.log(selected_spells_list);
 }
 
 function removeSpell(event) {
-    // console.log(event.target.id.split("display-"));
-    var spell_button_id = event.target.id.split("display-")[1];
-    document.getElementById(spell_button_id).setAttribute("class", "");
+    fetch("/character/getCharacterSpells", {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            const character_spells = data;
 
-    Object.entries(all_spells).forEach(([level, spells]) => {
-        // console.log(level);
+            var spell_button_id = event.target.id.split("display-")[1];
+            document.getElementById(spell_button_id).setAttribute("class", "");
 
-        spells.forEach((spell) => {
-            if (spell.index === spell_button_id) {
-                // console.log(spell);
-                var selected_spell_index =
-                    selected_spells_list[level].indexOf(spell);
-                // console.log(spells.indexOf(spell));
+            Object.entries(all_spells).forEach(([level, spells]) => {
+                spells.forEach((spell) => {
+                    if (spell.index === spell_button_id) {
+                        // TODO: Fix remove
 
-                if (selected_spell_index != -1) {
-                    selected_spells_list[level].splice(selected_spell_index, 1);
-                }
-            }
+                        // var spells_to_remove =
+                        //     spells_to_remove[level].indexOf(spell);
+
+                        // if (spells_to_remove != -1) {
+                        //     spells_to_remove[level].splice(spells_to_remove, 1);
+                        // }
+                        var isSpellSelected =
+                            character_spells[level].find(
+                                (item) => item.index === spell.index
+                            ) ||
+                            selected_spells_list[level].find(
+                                (item) => item.index === spell.index
+                            );
+
+                        console.log(isSpellSelected);
+
+                        if (
+                            character_spells[level].find(
+                                (item) => item.index === spell.index
+                            )
+                        ) {
+                            var spells_to_remove =
+                                character_spells[level].indexOf(spell);
+
+                            if (spells_to_remove != -1) {
+                                character_spells[level].splice(
+                                    spells_to_remove,
+                                    1
+                                );
+                            }
+                        } else if (
+                            selected_spells_list[level].find(
+                                (item) => item.index === spell.index
+                            )
+                        ) {
+                            var spells_to_remove =
+                                selected_spells_list[level].indexOf(spell);
+
+                            if (spells_to_remove != -1) {
+                                selected_spells_list[level].splice(
+                                    spells_to_remove,
+                                    1
+                                );
+                            }
+                        }
+                    }
+                });
+            });
+
+            document.getElementById(event.target.id).remove();
+        })
+        .catch((error, response) => {
+            console.error("Error in spellOverlaySetup.js: ", error);
         });
-    });
-
-    document.getElementById(event.target.id).remove();
-
-    // console.log(selected_spells_list);
 }

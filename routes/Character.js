@@ -10,10 +10,23 @@ CharacterRouter.get("/", (req, res) => {
     res.json(character);
 });
 
+// GET
+CharacterRouter.get("/getCharacterSpells", (req, res) => {
+    const character_file = JSON.parse(
+        fs.readFileSync("./characters/Mythia Hernandeya.json")
+    );
+
+    const character_spells = character_file.character[0].spells;
+
+    // console.log(character_file.character[0].spells);
+    res.send(character_spells);
+});
+
+// PATCH
 CharacterRouter.patch("/confirmSpells", (req, res) => {
     // console.log(req.body.spells);
 
-    //Edit character sheet with spells
+    // Edit character sheet with spells
     const character_file = JSON.parse(
         fs.readFileSync("./characters/Mythia Hernandeya.json")
     );
