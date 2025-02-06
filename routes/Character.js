@@ -46,7 +46,7 @@ CharacterRouter.patch("/confirmSpells", (req, res) => {
     //     fs.readFileSync("./characters/Mythia Hernandeya.json")
     // );
 
-    res.send(character_file);
+    res.send(character_file.character[0].spells);
 });
 
 module.exports = CharacterRouter;

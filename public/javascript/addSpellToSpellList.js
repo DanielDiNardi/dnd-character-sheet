@@ -10,6 +10,18 @@ var selected_spells_list = {
     8: [],
     9: [],
 };
+var spells_to_remove = {
+    0: [],
+    1: [],
+    2: [],
+    3: [],
+    4: [],
+    5: [],
+    6: [],
+    7: [],
+    8: [],
+    9: [],
+};
 
 function addSpell(event) {
     fetch("/character/getCharacterSpells", {
@@ -67,6 +79,8 @@ function removeSpell(event) {
     })
         .then((response) => response.json())
         .then((data) => {
+            console.log("Removing spell...");
+
             const character_spells = data;
 
             var spell_button_id = event.target.id.split("display-")[1];
@@ -75,52 +89,20 @@ function removeSpell(event) {
             Object.entries(all_spells).forEach(([level, spells]) => {
                 spells.forEach((spell) => {
                     if (spell.index === spell_button_id) {
-                        // TODO: Fix remove
-
-                        // var spells_to_remove =
-                        //     spells_to_remove[level].indexOf(spell);
-
-                        // if (spells_to_remove != -1) {
-                        //     spells_to_remove[level].splice(spells_to_remove, 1);
-                        // }
-                        var isSpellSelected =
-                            character_spells[level].find(
-                                (item) => item.index === spell.index
-                            ) ||
-                            selected_spells_list[level].find(
-                                (item) => item.index === spell.index
-                            );
-
-                        console.log(isSpellSelected);
-
                         if (
                             character_spells[level].find(
                                 (item) => item.index === spell.index
                             )
                         ) {
-                            var spells_to_remove =
-                                character_spells[level].indexOf(spell);
-
-                            if (spells_to_remove != -1) {
-                                character_spells[level].splice(
-                                    spells_to_remove,
-                                    1
-                                );
-                            }
+                            spells_to_remove[level].push(spell);
                         } else if (
                             selected_spells_list[level].find(
                                 (item) => item.index === spell.index
                             )
                         ) {
-                            var spells_to_remove =
-                                selected_spells_list[level].indexOf(spell);
-
-                            if (spells_to_remove != -1) {
-                                selected_spells_list[level].splice(
-                                    spells_to_remove,
-                                    1
-                                );
-                            }
+                            spells_to_remove[level].push(spell);
+                        } else {
+                            console.log("Spell not found...");
                         }
                     }
                 });

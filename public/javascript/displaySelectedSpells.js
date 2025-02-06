@@ -18,7 +18,7 @@ function displaySelectedSpells() {
                 );
                 return acc;
             }, {});
-
+            //TODO: Fix displaying removed spells when adding new spells
             Object.entries(display_spells).forEach(([level, spells]) => {
                 // Sorts selected spells in alphabetical order
                 display_spells[level].sort((spell_a, spell_b) => {
