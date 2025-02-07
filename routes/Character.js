@@ -10,43 +10,4 @@ CharacterRouter.get("/", (req, res) => {
     res.json(character);
 });
 
-// GET
-CharacterRouter.get("/getCharacterSpells", (req, res) => {
-    const character_file = JSON.parse(
-        fs.readFileSync("./characters/Mythia Hernandeya.json")
-    );
-
-    const character_spells = character_file.character[0].spells;
-
-    // console.log(character_file.character[0].spells);
-    res.send(character_spells);
-});
-
-// PATCH
-CharacterRouter.patch("/confirmSpells", (req, res) => {
-    // console.log(req.body.spells);
-
-    // Edit character sheet with spells
-    const character_file = JSON.parse(
-        fs.readFileSync("./characters/Mythia Hernandeya.json")
-    );
-    character_file.character[0].spells = req.body.spells;
-    // console.log(typeof character_file);
-
-    fs.writeFileSync(
-        "./characters/Mythia Hernandeya.json",
-        JSON.stringify(character_file),
-        (err) => {
-            console.log("Spell Write Error: " + err);
-        }
-    );
-
-    // console.log(character);
-    // const updated_character_file = JSON.parse(
-    //     fs.readFileSync("./characters/Mythia Hernandeya.json")
-    // );
-
-    res.send(character_file.character[0].spells);
-});
-
 module.exports = CharacterRouter;

@@ -1,5 +1,7 @@
+
 // Generate HTML Button elements onto the webpage
-function GenerateButtons(index, name, type, { max = 20, appendToId, onclick }) {
+function GenerateButtons(index, max = 20, name, type){
+
     // type = "ability", "attack", "skill", "damage"
     // name = "acrobatics", "Spear", "strength"
     // <button data-type="ability" data-ablilties="str" onclick="Roll()">Roll Strength</button>
@@ -9,24 +11,11 @@ function GenerateButtons(index, name, type, { max = 20, appendToId, onclick }) {
 
     buttonElement.setAttribute("data-type", type);
     buttonElement.setAttribute(`data-${type}`, name.toLowerCase());
-    buttonElement.setAttribute("id", index);
+    buttonElement.setAttribute("onclick", `Roll(${max})`);
+
     var typeCapitalized = type[0].toUpperCase() + type.slice(1);
-    if (type != "spell-list" && type != "spell") {
-        buttonElement.setAttribute("onclick", `Roll(${max})`);
-        buttonElement.innerHTML = "Roll " + typeCapitalized + " for " + name;
-    } else if (type === "spell-list") {
-        buttonElement.innerHTML = "Open " + name;
-    } else if (type === "spell") {
-        buttonElement.innerHTML = name;
-    }
+    
+    buttonElement.innerHTML = "Roll " + typeCapitalized + " for " + name;
 
-    if (appendToId) {
-        document.getElementById(appendToId).append(buttonElement);
-    } else if (type !== "overlay") {
-        document.getElementById(`${type}-buttons`).append(buttonElement);
-    }
-
-    if (onclick) {
-        buttonElement.setAttribute("onclick", onclick);
-    }
+    document.getElementById(`${type}-buttons`).append(buttonElement);
 }
