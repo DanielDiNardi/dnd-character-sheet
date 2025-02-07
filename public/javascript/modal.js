@@ -43,6 +43,30 @@ function deleteOverlay() {
     document.getElementById("background").remove();
 }
 
-function setupAddSpellsModal() {
-    return createElement("div", { id: "add_spells_modal" });
+async function setupAddSpellsModal() {
+    try {
+        const addSpellModalElement = createElement("div", {
+            id: "add_spells_modal",
+        });
+        var spellList = await fetch("https://www.dnd5eapi.co/api/spells", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+            .then((response) => response.json())
+            .catch((error, response) => {
+                console.error("Error in modal.js/setupAddSpellsModal: ", error);
+            });
+
+        addSpellModalElement.innerText = await spellList;
+
+        return addSpellModalElement;
+    } catch (error) {
+        addSpellModalElement.innerText = "Error loading data.";
+
+        console.error("Error:", error);
+
+        return addSpellModalElement;
+    }
 }
