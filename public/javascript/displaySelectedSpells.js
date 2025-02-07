@@ -9,7 +9,7 @@ function displaySelectedSpells() {
         .then((response) => response.json())
         .then((data) => {
             const character_spells = data;
-            const display_spells = Object.keys({
+            const character_and_selected_spells = Object.keys({
                 ...character_spells,
                 ...selected_spells_list,
             }).reduce((acc, key) => {
@@ -18,6 +18,12 @@ function displaySelectedSpells() {
                 );
                 return acc;
             }, {});
+
+            const display_spells = getDifference(
+                character_and_selected_spells,
+                spells_to_remove
+            );
+
             //TODO: Fix displaying removed spells when adding new spells
             Object.entries(display_spells).forEach(([level, spells]) => {
                 // Sorts selected spells in alphabetical order
